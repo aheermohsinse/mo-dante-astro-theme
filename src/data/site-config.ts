@@ -78,7 +78,7 @@ const siteConfig: SiteConfig = {
         },
         {
             text: 'Download theme',
-            href: 'https://github.com/JustGoodUI/dante-astro-theme'
+            href: 'https://github.com/aheermohsinse'
         }
     ],
     socialLinks: [
@@ -97,9 +97,9 @@ const siteConfig: SiteConfig = {
     ],
     hero: {
         title: 'Hi There & Welcome to My Corner of the Web!',
-        text: "Software Quality Assurance Engineer with 9+ years of professionalindustry experience. Strong abilities in Quality Assurance, Requirement Analysis, Test Plan, Test Execution, Manual && Automation Testing,Test Management, Reporting andTracking, Testing Maintenance, Team Collaboration and QA reports. Feel free to explore some of my coding endeavors on <a href='https://github.com/aheermohsinse'>GitHub</a> or follow me on <a href='https://twitter.com/'>Twitter/X</a>.",
+        text: "I am Mohsin Aheer, Software Quality Assurance Engineer with 10+ years of professionalindustry experience. Strong abilities in Quality Assurance, Requirement Analysis, Test Plan, Test Execution, Manual && Automation Testing,Test Management, Reporting andTracking, Testing Maintenance, Team Collaboration and QA reports. Feel free to explore some of my coding endeavors on <a href='https://github.com/aheermohsinse'>GitHub</a> or follow me on <a href='https://twitter.com/'>Twitter/X</a>.",
         image: {
-            src: '/hero.jpeg',
+            src: '/hero2.jpeg',
             alt: 'A person sitting at a desk in front of a computer'
         },
         actions: [
