@@ -1,62 +1,70 @@
 ---
-title: 'PixelPerfect Art Gallery'
-description: PixelPerfect Art Gallery is an innovative online platform that transcends traditional art exhibition spaces.
-publishDate: 'Oct 25 2023'
+title: 'Page Object Model (POM) | Design Pattern'
+description: Page Object Model is a design pattern which has become popular in test automation for enhancing test maintenance and reducing code duplication. A page object is an object-oriented class that serves as an interface to a page of your AUT.
+publishDate: 'May 24 2018'
 isFeatured: true
 seo:
   image:
-    src: '/project-5.jpg'
+    src: '/project-5n2.jpeg'
 ---
 
-![Project preview](/project-5.jpg)
+![Project preview](/project-5n2.jpeg)
 
-**Note:** This case study is entirely fictional and created for the purpose of showcasing [Dante Astro.js theme functionality](https://justgoodui.com/astro-themes/dante/).
+<!-- **Note:** This case study is entirely fictional and created for the purpose of showcasing [Dante Astro.js theme functionality](https://justgoodui.com/astro-themes/dante/). -->
 
-**Project Overview:**
-PixelPerfect Art Gallery is an innovative online platform that transcends traditional art exhibition spaces. This web application is dedicated to showcasing and celebrating pixel art in the form of Non-Fungible Tokens (NFTs), providing artists with a digital canvas to display their unique creations while ensuring secure ownership through blockchain technology.
+**What is POM?**
+Page Object Model is a design pattern which has become popular in test automation for enhancing test maintenance and reducing code duplication. A page object is an object-oriented class that serves as an interface to a page of your AUT.
 
-## Objectives
+The tests then use the methods of this page object class whenever they need to interact with the UI of that page, the benefit is that if the UI changes for the page, the tests themselves don’t need to be changed, only the code within the page object needs to change.
 
-1. Create an immersive online gallery experience specifically tailored for pixel art enthusiasts and NFT collectors.
-2. Utilize blockchain technology to authenticate and secure ownership of digital artworks, ensuring a transparent and tamper-proof art marketplace.
-3. Foster a community of digital artists and art collectors, providing a platform for collaboration, appreciation, and exchange.
+Subsequently all changes to support that new UI are located in one place.
 
-## Features
+## Why we need POM?
 
-1. **NFT Art Exhibition:**
+Increasing automation test coverage can result in unmaintainable project structure, if locators are not managed in right way. This can happen due to duplication of code or mainly due to duplicated usage of locators.
 
-- PixelPerfect features a curated exhibition of pixel art NFTs, showcasing a diverse range of styles, themes, and techniques.
-- Users can explore and appreciate the intricate details of each digital artwork in a visually stunning online gallery.
+For Example, in home page of web application we have menu bar which leads to different modules with different features.
 
-2. **Blockchain Authentication:**
+Many automation test cases would be clicking through these menu buttons to execute specific tests. Imagine that the UI is changed/revamped and menu buttons are relocated to different position in home page, this will result automation tests to fail. Automated test cases will fail as scripts will not be able to find particular element-locators to perform action.
 
-- Each pixel art piece is tokenized as an NFT on a blockchain, ensuring authenticity, provenance, and secure ownership.
-- Users can view the blockchain records to verify the origin and history of the digital artworks.
+Now, QA Engineer need to walk through whole code to update locators where necessary. Updating element-locators in duplicated code will consume a lot of time to only adjust locators, while this time can be consumed to increase test coverage. We can save this time by using Page Object Model in our test automation framework.
 
-3. **Virtual Art Auctions:**
 
-- PixelPerfect hosts virtual art auctions, allowing users to bid on and acquire exclusive pixel art NFTs.
-- The auction platform provides a dynamic and engaging environment for art enthusiasts and collectors.
+## Advantages of Page Object Model:
 
-4. **Community Collaboration Spaces:**
+1. According to Page Object Model, we should keep our tests and element locators separately, this will keep code clean and easy to understand and maintain.
+2. The Page Object approach makes test automation framework programmer friendly, more durable and comprehensive.
+3. Another important advantage is our Page Object Repository is Independent of Automation Tests. Keeping separate repository for page objects helps us to use this repository for different purposes with different frameworks like, we are able to integrate this repository with other tools like JUnit/NUnit/PhpUnit as well as with TestNG/Cucumber/etc.
+4. Test cases become short and optimized as we are able to reuse page object methods in the POM classes.
+5. Any change in UI can easily be implemented, updated and maintained into the Page Objects and Classes.
 
-- Dedicated community spaces allow artists to connect, collaborate, and showcase their creative process.
-- Users can discuss techniques, share insights, and even collaborate on pixel art projects within the PixelPerfect community.
+## How to implement POM:
 
-5. **Interactive Pixel Art Creation Workshop:**
+POM is best applicable for the applications which contain multiple pages. Each of which have fields which can be uniquely referenced with respect to the page.
 
-- PixelPerfect provides a virtual workshop where users can create their own pixel art and potentially tokenize their creations as NFTs.
-- Artists can share their works with the community or submit them for consideration in future exhibitions.
+1. Create new directory/folder/package in your project depending upon which IDE you are using and name it as PageObjects, you can do this by right click on the project root level and select New > Directory, in my case, I am using PhpStorm with Codeception as an automation framework so it contains Page Object Model inside _support folder as shown in screenshot but it doesn’t matter.
+You can create it at root level of project and call it accordingly in your project, you can even add sub folders inside PageObjects to keep more categorized and clean.
 
-## Technology Stack
+2. Now right click on folder and add new Class file in it and name it to actual page from test object i.e. PageObjects -> Login -> LoginHome.php
 
-- Frontend: Angular for a dynamic and responsive user interface.
-- Backend: Node.js for handling server-side logic and API integration.
-- Database: Ethereum blockchain for storing NFT ownership and transaction details.
-- Smart Contracts: Solidity for developing blockchain smart contracts.
+3. Now you can write method for each element in LoginHome page, each method contains a return value element and your page object class will look like this:
 
-## Outcome
+3. Now create test case for Login by right click on Tests folder in your project directory: add new class and name it LoginCest.php
 
-PixelPerfect Art Gallery has successfully created a digital haven for pixel art enthusiasts, providing a secure and engaging platform for artists and collectors alike. The integration of blockchain technology ensures transparency and authenticity in the world of digital art, fostering a vibrant community that appreciates the uniqueness and creativity of pixel art NFTs.
+Note: you can create TestCase class in your Tests folder and name it according to your test, it doesn’t matter which IDE you are using. Only important is that you call the page object class in your tests class so when script are executed, it get respective element locators.
 
-**Note:** This case study is entirely fictional and created for the purpose of showcasing [Dante Astro.js theme functionality](https://justgoodui.com/astro-themes/dante/).
+Now, you can write your test cases in test class and run it. Test class will look like this:
+
+And using Page Object Model our final project structure looks like this:
+
+## Summary
+
+Using Page Object Model, all element locators are being managed in separate directory and can be updated easily without any change in test cases.
+
+I have created sample project with Page Object Model implementation, find it here.
+
+In next blog I will explain how we can create a separate repository of Page Objects and can use in multiple projects on need base.
+
+And that wraps it up for this article, if you would like to learn more about POM, you can follow these links.
+
+<!-- **Note:** This case study is entirely fictional and created for the purpose of showcasing [Dante Astro.js theme functionality](https://justgoodui.com/astro-themes/dante/). -->

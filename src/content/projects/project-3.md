@@ -1,5 +1,5 @@
 ---
-title: 'RoboChef - AI Powered Cooking Guide'
+title: 'End to End Automation Testing — Codeception'
 description: RoboChef Recipe Assistant is a groundbreaking mobile application that leverages artificial intelligence to redefine the cooking experience.
 publishDate: 'Oct 12 2023'
 isFeatured: true
@@ -10,10 +10,14 @@ seo:
 
 ![Project preview](/project-3.jpg)
 
-**Note:** This case study is entirely fictional and created for the purpose of showcasing [Dante Astro.js theme functionality](https://justgoodui.com/astro-themes/dante/).
+<!-- **Note:** This case study is entirely fictional and created for the purpose of showcasing [Dante Astro.js theme functionality](https://justgoodui.com/astro-themes/dante/). -->
 
 **Project Overview:**
-RoboChef Recipe Assistant is a groundbreaking mobile application that leverages artificial intelligence to redefine the cooking experience. By combining machine learning with culinary expertise, RoboChef empowers users to explore a world of flavors, improve their cooking skills, and enjoy personalized recipe recommendations.
+The Codeception framework was developed to actually make testing fun, it allows writing unit, functional, integration, and acceptance tests in a single and coherent style. It can be called a BDD (Behavior Driven Development) framework.
+
+In this blog, I am going to share steps to setup Codeception and run basic scripts. I am using PhpStorm with Codeception, as we have very good experience with it while using it in tajawal. However, you can choose any IDE of your choice.
+
+Now open terminal and go to the created project directory and perform below-mentioned steps:
 
 ## Objectives
 
@@ -55,10 +59,10 @@ RoboChef Recipe Assistant is a groundbreaking mobile application that leverages 
 - Database: PostgreSQL for efficient data storage and retrieval.
 - AI Integration: TensorFlow for machine learning models powering recipe recommendations.
 
-> Ethan Donovan possesses a rare blend of technical expertise and creative flair. They skillfully transformed our vague ideas into a visually stunning and highly functional website. The end result exceeded our expectations, and we continue to receive compliments on the design and user experience.
+> Mohsin Aheer possesses a rare blend of technical expertise and creative flair. They skillfully transformed our vague ideas into a visually stunning and highly functional website. The end result exceeded our expectations, and we continue to receive compliments on the design and user experience.
 
 ## Outcome
 
 RoboChef Recipe Assistant has revolutionized the way users approach cooking, making it an enjoyable and educational experience. The AI-powered features not only simplify the cooking process but also contribute to users' culinary growth, creating a personalized and evolving cooking journey.
 
-**Note:** This case study is entirely fictional and created for the purpose of showcasing [Dante Astro.js theme functionality](https://justgoodui.com/astro-themes/dante/).
+<!-- **Note:** This case study is entirely fictional and created for the purpose of showcasing [Dante Astro.js theme functionality](https://justgoodui.com/astro-themes/dante/). -->
