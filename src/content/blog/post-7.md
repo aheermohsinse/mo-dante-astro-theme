@@ -3,9 +3,9 @@ title: Exploring the Future of Front-End Development with Astro.js
 excerpt: In recent years, we've seen the rise of various tools and frameworks that have revolutionized the way we build web applications. One such exciting addition to the front-end development landscape is Astro.js.
 publishDate: 'October 10 2023'
 tags:
-  - Web
-  - UX
-  - Web development
+  - Software Quality Assurance Engineering Web
+  - Usability
+  - QA
 seo:
   image:
     src: '/post-7.jpg'
@@ -14,7 +14,7 @@ seo:
 
 ![Bright lines on a dark background](/post-7.jpg)
 
-**Note:** This post was created using Chat GPT to demonstrate the features of the _[Dante Astro.js theme functionality](https://justgoodui.com/astro-themes/dante/)_.
+<!-- **Note:** This post was created using Chat GPT to demonstrate the features of the _[Dante Astro.js theme functionality](https://justgoodui.com/astro-themes/dante/)_. -->
 
 Front-end development is a dynamic field that continually evolves to meet the demands of modern web development. In recent years, we've seen the rise of various tools and frameworks that have revolutionized the way we build web applications. One such exciting addition to the front-end development landscape is Astro.js. In this post, we'll explore what Astro.js is and how it promises to shape the future of front-end development.
 
